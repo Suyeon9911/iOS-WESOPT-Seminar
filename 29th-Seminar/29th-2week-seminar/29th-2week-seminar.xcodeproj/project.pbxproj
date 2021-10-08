@@ -13,6 +13,7 @@
 		4D26B8532710E960002B6E68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D26B8512710E960002B6E68 /* Main.storyboard */; };
 		4D26B8552710E962002B6E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D26B8542710E962002B6E68 /* Assets.xcassets */; };
 		4D26B8582710E962002B6E68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D26B8562710E962002B6E68 /* LaunchScreen.storyboard */; };
+		4D26B8602710E9D6002B6E68 /* AutoLayoutPractice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D26B85F2710E9D6002B6E68 /* AutoLayoutPractice.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4D26B8542710E962002B6E68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D26B8572710E962002B6E68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D26B8592710E963002B6E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D26B85F2710E9D6002B6E68 /* AutoLayoutPractice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayoutPractice.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4D26B84D2710E960002B6E68 /* SceneDelegate.swift */,
 				4D26B84F2710E960002B6E68 /* ViewController.swift */,
 				4D26B8512710E960002B6E68 /* Main.storyboard */,
+				4D26B85F2710E9D6002B6E68 /* AutoLayoutPractice.storyboard */,
 				4D26B8542710E962002B6E68 /* Assets.xcassets */,
 				4D26B8562710E962002B6E68 /* LaunchScreen.storyboard */,
 				4D26B8592710E963002B6E68 /* Info.plist */,
@@ -127,6 +130,7 @@
 			files = (
 				4D26B8582710E962002B6E68 /* LaunchScreen.storyboard in Resources */,
 				4D26B8552710E962002B6E68 /* Assets.xcassets in Resources */,
+				4D26B8602710E9D6002B6E68 /* AutoLayoutPractice.storyboard in Resources */,
 				4D26B8532710E960002B6E68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
