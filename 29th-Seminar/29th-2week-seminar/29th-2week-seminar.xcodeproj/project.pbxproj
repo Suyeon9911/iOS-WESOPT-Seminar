@@ -14,6 +14,10 @@
 		4D26B8552710E962002B6E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D26B8542710E962002B6E68 /* Assets.xcassets */; };
 		4D26B8582710E962002B6E68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D26B8562710E962002B6E68 /* LaunchScreen.storyboard */; };
 		4D26B8602710E9D6002B6E68 /* AutoLayoutPractice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D26B85F2710E9D6002B6E68 /* AutoLayoutPractice.storyboard */; };
+		4DC16F0F2711814200FA3FC2 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC16F0E2711814200FA3FC2 /* Tabbar.storyboard */; };
+		4DC16F11271183C900FA3FC2 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC16F10271183C900FA3FC2 /* CustomTabBarViewController.swift */; };
+		4DC16F13271183F700FA3FC2 /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC16F12271183F700FA3FC2 /* OrangeVC.swift */; };
+		4DC16F152711840400FA3FC2 /* PupleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC16F142711840400FA3FC2 /* PupleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		4D26B8572710E962002B6E68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D26B8592710E963002B6E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D26B85F2710E9D6002B6E68 /* AutoLayoutPractice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AutoLayoutPractice.storyboard; sourceTree = "<group>"; };
+		4DC16F0E2711814200FA3FC2 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		4DC16F10271183C900FA3FC2 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		4DC16F12271183F700FA3FC2 /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
+		4DC16F142711840400FA3FC2 /* PupleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupleVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				4D26B8542710E962002B6E68 /* Assets.xcassets */,
 				4D26B8562710E962002B6E68 /* LaunchScreen.storyboard */,
 				4D26B8592710E963002B6E68 /* Info.plist */,
+				4DC16F0E2711814200FA3FC2 /* Tabbar.storyboard */,
+				4DC16F10271183C900FA3FC2 /* CustomTabBarViewController.swift */,
+				4DC16F12271183F700FA3FC2 /* OrangeVC.swift */,
+				4DC16F142711840400FA3FC2 /* PupleVC.swift */,
 			);
 			path = "29th-2week-seminar";
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC16F0F2711814200FA3FC2 /* Tabbar.storyboard in Resources */,
 				4D26B8582710E962002B6E68 /* LaunchScreen.storyboard in Resources */,
 				4D26B8552710E962002B6E68 /* Assets.xcassets in Resources */,
 				4D26B8602710E9D6002B6E68 /* AutoLayoutPractice.storyboard in Resources */,
@@ -144,7 +157,10 @@
 			files = (
 				4D26B8502710E960002B6E68 /* ViewController.swift in Sources */,
 				4D26B84C2710E960002B6E68 /* AppDelegate.swift in Sources */,
+				4DC16F13271183F700FA3FC2 /* OrangeVC.swift in Sources */,
+				4DC16F11271183C900FA3FC2 /* CustomTabBarViewController.swift in Sources */,
 				4D26B84E2710E960002B6E68 /* SceneDelegate.swift in Sources */,
+				4DC16F152711840400FA3FC2 /* PupleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
