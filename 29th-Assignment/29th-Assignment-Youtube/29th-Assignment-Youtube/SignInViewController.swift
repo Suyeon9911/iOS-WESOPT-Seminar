@@ -17,22 +17,21 @@ class SignInViewController: UIViewController {
     @IBOutlet var nextButton: UIButton!
     
     // MARK: Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         nextButton.isEnabled = false
-        self.nameTextField.addTarget(self, action: #selector(self.checkFilledTextField(_:)), for: .editingChanged)
-        self.emailTextField.addTarget(self, action: #selector(self.checkFilledTextField(_:)), for: .editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(self.checkFilledTextField(_:)), for: .editingChanged)
-        // Do any additional setup after loading the view.
+        
+        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
+        self.emailTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
     }
     
     // MARK: - Methods
     // MARK: Custom Method
     
-    @objc func checkFilledTextField(_ sender: Any?) {
-        
-        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" {
+    @objc func textFieldDidEndEditing(_ textField: UITextField) {
+        if nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText {
             nextButton.isEnabled = true
         } else {
             nextButton.isEnabled = false
@@ -48,7 +47,6 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
-            
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController else {return}
         
         welcomeVC.userName = nameTextField.text

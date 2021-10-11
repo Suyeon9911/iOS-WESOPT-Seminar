@@ -43,7 +43,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-qp-OYv">
-                                <rect key="frame" x="43" y="557" width="85" height="31"/>
+                                <rect key="frame" x="43" y="557" width="106" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="계정만들기"/>
@@ -57,7 +57,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음">
-                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                    <color key="baseBackgroundColor" name="googleblue"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRr-T3-TkD"/>
@@ -123,13 +123,15 @@
                                 <rect key="frame" x="68" y="570" width="278" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음">
+                                    <color key="baseBackgroundColor" name="googleblue"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButton:" destination="7of-Ce-XIe" eventType="touchUpInside" id="8jU-JW-Z0J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaF-8d-R3d">
-                                <rect key="frame" x="59" y="522" width="124" height="31"/>
+                                <rect key="frame" x="59" y="522" width="166" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title=" 비밀번호 표시">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
@@ -183,7 +185,9 @@
                                 <rect key="frame" x="77" y="416" width="278" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="확인"/>
+                                <buttonConfiguration key="configuration" style="filled" title="확인">
+                                    <color key="baseBackgroundColor" name="googleblue"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="confirmButton:" destination="ngk-QK-ieb" eventType="touchUpInside" id="Y1E-xA-Mm8"/>
                                 </connections>
@@ -237,6 +241,9 @@
         <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="googleblue">
+            <color red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
