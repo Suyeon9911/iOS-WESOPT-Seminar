@@ -21,10 +21,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.isEnabled = false
-        
-        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
-        self.emailTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
+        setTextField()
     }
     
     // MARK: - Methods
@@ -36,6 +33,12 @@ class SignInViewController: UIViewController {
         } else {
             nextButton.isEnabled = false
         }
+    }
+    
+    func setTextField() {
+        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
+        self.emailTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
     }
     
     // MARK: IBActions
