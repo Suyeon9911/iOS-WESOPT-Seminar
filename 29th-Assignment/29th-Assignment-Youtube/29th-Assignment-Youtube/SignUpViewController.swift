@@ -29,18 +29,10 @@ class SignUpViewController: UIViewController {
     // MARK: - Methods
     // MARK: Custom Method
     
-    @objc func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText {
-            nextButton.isEnabled = true
-        } else {
-            nextButton.isEnabled = false
-        }
-    }
-    
     func setTextField() {
-        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
-        self.emailTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
+        [nameTextField, emailTextField, passwordTextField].forEach {
+            $0?.delegate = self
+        }
     }
     
     // MARK: IBActions
@@ -67,4 +59,16 @@ class SignUpViewController: UIViewController {
     }
     
 
+}
+
+// MARK: - Extensions
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText {
+            nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
+        }
+    }
 }

@@ -9,14 +9,14 @@ import UIKit
 
 class SignInViewController: UIViewController {
     
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
     
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var nextButton: UIButton!
     
-    // MARK: Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,21 +27,13 @@ class SignInViewController: UIViewController {
     // MARK: - Methods
     // MARK: Custom Method
     
-    @objc func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText {
-            nextButton.isEnabled = true
-        } else {
-            nextButton.isEnabled = false
+    func setTextField() {
+        [nameTextField, emailTextField, passwordTextField].forEach {
+            $0?.delegate = self
         }
     }
     
-    func setTextField() {
-        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
-        self.emailTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
-    }
-    
-    // MARK: IBActions
+    // MARK: - IBActions
     
     @IBAction func createAccountButton(_ sender: UIButton) {
         guard let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") else {return}
@@ -57,4 +49,17 @@ class SignInViewController: UIViewController {
         self.present(welcomeVC, animated: true, completion: nil)
     }
     
+    
+}
+
+// MARK: - Extensions
+
+extension SignInViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText {
+            nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
+        }
+    }
 }
