@@ -30,6 +30,7 @@ class SignInViewController: UIViewController {
     func setTextField() {
         [nameTextField, emailTextField, passwordTextField].forEach {
             $0?.delegate = self
+            $0?.addTarget(self, action: #selector(self.textFieldDidEndEditing(_:)), for: .editingChanged)
         }
     }
     
@@ -61,5 +62,15 @@ extension SignInViewController: UITextFieldDelegate {
         } else {
             nextButton.isEnabled = false
         }
+    }
+    
+    func textFieldShouldReturn (_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField: emailTextField.becomeFirstResponder()
+        case emailTextField: passwordTextField.becomeFirstResponder()
+        case passwordTextField: passwordTextField.resignFirstResponder()
+        default: break
+        }
+        return true
     }
 }
