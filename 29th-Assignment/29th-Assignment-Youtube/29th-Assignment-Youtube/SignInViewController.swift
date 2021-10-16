@@ -20,12 +20,16 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.isEnabled = false
+        setNextButton()
         setTextField()
     }
     
     // MARK: - Methods
     // MARK: Custom Method
+    
+    func setNextButton() {
+        nextButton.isEnabled = false
+    }
     
     func setTextField() {
         [nameTextField, emailTextField, passwordTextField].forEach {
@@ -36,21 +40,19 @@ class SignInViewController: UIViewController {
     
     // MARK: - IBActions
     
-    @IBAction func createAccountButton(_ sender: UIButton) {
+    @IBAction func createAccountButtonDidTap(_ sender: UIButton) {
         guard let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") else {return}
         
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
-    @IBAction func nextButton(_ sender: UIButton) {
+    @IBAction func nextButtonDidTap(_ sender: UIButton) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController else {return}
         
         welcomeVC.userName = nameTextField.text
         welcomeVC.modalPresentationStyle = .fullScreen
         self.present(welcomeVC, animated: true, completion: nil)
     }
-    
-    
 }
 
 // MARK: - Extensions
@@ -74,3 +76,4 @@ extension SignInViewController: UITextFieldDelegate {
         return true
     }
 }
+

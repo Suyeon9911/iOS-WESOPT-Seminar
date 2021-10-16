@@ -10,7 +10,7 @@ import UIKit
 class SignUpViewController: UIViewController {
     
 
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
     
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
@@ -18,16 +18,20 @@ class SignUpViewController: UIViewController {
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var showPasswordButton: UIButton!
     
-    // MARK: Life Cycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.isEnabled = false
+        setNextButton()
         setTextField()
     }
     
     // MARK: - Methods
     // MARK: Custom Method
+    
+    func setNextButton() {
+        nextButton.isEnabled = false
+    }
     
     func setTextField() {
         [nameTextField, emailTextField, passwordTextField].forEach {
@@ -36,9 +40,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    // MARK: IBActions
+    // MARK: - IBActions
     
-    @IBAction func showPasswordButton(_ sender: UIButton) {
+    @IBAction func showPasswordButtonDidTap(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         
         if sender.isSelected {
@@ -50,7 +54,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func nextButton(_ sender: Any) {
+    @IBAction func nextButtonDidTap(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController else {return}
         
         welcomeVC.userName = nameTextField.text
@@ -58,8 +62,6 @@ class SignUpViewController: UIViewController {
         self.present(welcomeVC, animated: true, completion: nil)
         
     }
-    
-
 }
 
 // MARK: - Extensions
@@ -71,7 +73,6 @@ extension SignUpViewController: UITextFieldDelegate {
         } else {
             nextButton.isEnabled = false
         }
-        
     }
     
     func textFieldShouldReturn (_ textField: UITextField) -> Bool {
