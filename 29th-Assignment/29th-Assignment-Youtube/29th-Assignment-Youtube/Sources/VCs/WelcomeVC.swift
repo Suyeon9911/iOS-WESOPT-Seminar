@@ -45,10 +45,9 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func otherLoginButtonDidTap(_ sender: Any) {
-        guard let pvc = presentingViewController as? UINavigationController
-            else { return }
+        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
             self.dismiss(animated: true) {
-                pvc.popToRootViewController(animated: true)
+                presentingVC.popToRootViewController(animated: true)
             }
     }
 }
