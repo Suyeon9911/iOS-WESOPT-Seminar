@@ -49,15 +49,5 @@ class WelcomeVC: UIViewController {
             self.dismiss(animated: true) {
                 presentingVC.popToRootViewController(animated: true)
             }
-        
-//        popToViewController를 사용하여 구현
-//        guard let presentingVC = self.presentingViewController as? UINavigationController else { return }
-//                let viewControllerStack = presentingVC.viewControllers
-//                self.dismiss(animated: true) {
-//                    for viewController in viewControllerStack {
-//                        if let rootVC = viewController as? SignInVC {
-//                            presentingVC.popToViewController(rootVC, animated: true)
-//                        }
-//                    }
-        }
+    }
 }
