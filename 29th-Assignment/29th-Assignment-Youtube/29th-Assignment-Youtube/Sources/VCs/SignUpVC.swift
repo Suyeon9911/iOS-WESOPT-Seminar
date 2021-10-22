@@ -69,7 +69,10 @@ class SignUpVC: UIViewController {
         
         welcomeVC.userName = nameTextField.text
         welcomeVC.modalPresentationStyle = .fullScreen
-        self.present(welcomeVC, animated: true, completion: nil)
+        self.present(welcomeVC, animated: true, completion: {
+            // welcomeVC로 modal present와 동시에 navigation stack에서 SignUpVC를 pop해줘서 rootVC로 돌아가게끔!
+            self.navigationController?.popToRootViewController(animated: true)
+        })
         
     }
 }
