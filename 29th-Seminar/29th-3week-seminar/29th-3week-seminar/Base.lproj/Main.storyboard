@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_9th_3week_seminar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8w-fw-IeN">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDg-Ty-oo4">
+                                        <rect key="frame" x="45" y="-8" width="374" height="778"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Yew-75-PMH" firstAttribute="top" secondItem="HDg-Ty-oo4" secondAttribute="top" constant="8" id="1Gs-pP-Gtc"/>
+                                    <constraint firstItem="HDg-Ty-oo4" firstAttribute="trailing" secondItem="Yew-75-PMH" secondAttribute="trailing" constant="285" id="E56-tY-y0z"/>
+                                    <constraint firstItem="HDg-Ty-oo4" firstAttribute="bottom" secondItem="Yew-75-PMH" secondAttribute="bottom" constant="120" id="Q7X-wV-YbL"/>
+                                    <constraint firstItem="HDg-Ty-oo4" firstAttribute="height" secondItem="zO6-ym-GRE" secondAttribute="height" id="ovV-eb-ec9"/>
+                                    <constraint firstItem="HDg-Ty-oo4" firstAttribute="width" secondItem="zO6-ym-GRE" secondAttribute="width" priority="250" id="rU5-PV-VWf"/>
+                                    <constraint firstItem="HDg-Ty-oo4" firstAttribute="leading" secondItem="Yew-75-PMH" secondAttribute="leading" constant="45" id="vyc-Yt-eoX"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Yew-75-PMH"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zO6-ym-GRE"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="F8w-fw-IeN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="OGH-xu-cue"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F8w-fw-IeN" secondAttribute="trailing" constant="20" id="VBr-1w-veG"/>
+                            <constraint firstItem="F8w-fw-IeN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZYb-xz-sKz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F8w-fw-IeN" secondAttribute="bottom" constant="20" id="eJ1-Aw-8gU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="-1"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
