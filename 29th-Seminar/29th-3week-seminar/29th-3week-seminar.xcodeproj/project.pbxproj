@@ -13,6 +13,14 @@
 		4DB31E0B2723A2A900C9D347 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB31E092723A2A900C9D347 /* Main.storyboard */; };
 		4DB31E0D2723A2AC00C9D347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB31E0C2723A2AC00C9D347 /* Assets.xcassets */; };
 		4DB31E102723A2AC00C9D347 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB31E0E2723A2AC00C9D347 /* LaunchScreen.storyboard */; };
+		4DDA69AA2723DAFB005151AC /* DelegatePracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA69A92723DAFB005151AC /* DelegatePracticeVC.swift */; };
+		4DDA69AC2723DF34005151AC /* PartDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA69AB2723DF34005151AC /* PartDataModel.swift */; };
+		4DDA69AE2723E840005151AC /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA69AD2723E83F005151AC /* Practice.storyboard */; };
+		4DDA69B02723E8E2005151AC /* RankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA69AF2723E8E2005151AC /* RankingVC.swift */; };
+		4DDA69B32723EA2D005151AC /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA69B12723EA2D005151AC /* RankingTableViewCell.swift */; };
+		4DDA69B42723EA2D005151AC /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA69B22723EA2D005151AC /* RankingTableViewCell.xib */; };
+		4DDA69B62723F155005151AC /* AppContentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA69B52723F155005151AC /* AppContentDataModel.swift */; };
+		4DDA69B82723FC2C005151AC /* RankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA69B72723FC2C005151AC /* RankCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		4DB31E0C2723A2AC00C9D347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB31E0F2723A2AC00C9D347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB31E112723A2AC00C9D347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDA69A92723DAFB005151AC /* DelegatePracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePracticeVC.swift; sourceTree = "<group>"; };
+		4DDA69AB2723DF34005151AC /* PartDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartDataModel.swift; sourceTree = "<group>"; };
+		4DDA69AD2723E83F005151AC /* Practice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
+		4DDA69AF2723E8E2005151AC /* RankingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingVC.swift; sourceTree = "<group>"; };
+		4DDA69B12723EA2D005151AC /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
+		4DDA69B22723EA2D005151AC /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
+		4DDA69B52723F155005151AC /* AppContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContentDataModel.swift; sourceTree = "<group>"; };
+		4DDA69B72723FC2C005151AC /* RankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +79,14 @@
 				4DB31E0C2723A2AC00C9D347 /* Assets.xcassets */,
 				4DB31E0E2723A2AC00C9D347 /* LaunchScreen.storyboard */,
 				4DB31E112723A2AC00C9D347 /* Info.plist */,
+				4DDA69A92723DAFB005151AC /* DelegatePracticeVC.swift */,
+				4DDA69AB2723DF34005151AC /* PartDataModel.swift */,
+				4DDA69AD2723E83F005151AC /* Practice.storyboard */,
+				4DDA69B12723EA2D005151AC /* RankingTableViewCell.swift */,
+				4DDA69B52723F155005151AC /* AppContentDataModel.swift */,
+				4DDA69B22723EA2D005151AC /* RankingTableViewCell.xib */,
+				4DDA69AF2723E8E2005151AC /* RankingVC.swift */,
+				4DDA69B72723FC2C005151AC /* RankCollectionViewCell.swift */,
 			);
 			path = "29th-3week-seminar";
 			sourceTree = "<group>";
@@ -125,7 +149,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DDA69B42723EA2D005151AC /* RankingTableViewCell.xib in Resources */,
 				4DB31E102723A2AC00C9D347 /* LaunchScreen.storyboard in Resources */,
+				4DDA69AE2723E840005151AC /* Practice.storyboard in Resources */,
 				4DB31E0D2723A2AC00C9D347 /* Assets.xcassets in Resources */,
 				4DB31E0B2723A2A900C9D347 /* Main.storyboard in Resources */,
 			);
@@ -140,6 +166,12 @@
 			files = (
 				4DB31E082723A2A900C9D347 /* ViewController.swift in Sources */,
 				4DB31E042723A2A900C9D347 /* AppDelegate.swift in Sources */,
+				4DDA69AA2723DAFB005151AC /* DelegatePracticeVC.swift in Sources */,
+				4DDA69B82723FC2C005151AC /* RankCollectionViewCell.swift in Sources */,
+				4DDA69B62723F155005151AC /* AppContentDataModel.swift in Sources */,
+				4DDA69B02723E8E2005151AC /* RankingVC.swift in Sources */,
+				4DDA69B32723EA2D005151AC /* RankingTableViewCell.swift in Sources */,
+				4DDA69AC2723DF34005151AC /* PartDataModel.swift in Sources */,
 				4DB31E062723A2A900C9D347 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
