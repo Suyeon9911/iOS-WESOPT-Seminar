@@ -36,10 +36,9 @@
 UIPickerViewDataSource에는 optional이 붙지 않은, 필수적으로 구현해야하는 함수들이 존재 ! ( 처음에 오류가 뜨는 이유 ! ) 
 
 1. UIPickerViewDataSource 
-   - numberOfComponents : 피커뷰의 컴포넌트 숫자를 지정해주는 메소드
-   - pickerView (_ ... , numberOfRowsInComponent ..) : 피커뷰의 각 컴포넌트에서 행의 개수를 지정해 주는 메소드
-        
-   - 마지막으로 partPickerView.dataSource = self 해주면 끝 
+ - numberOfComponents : 피커뷰의 컴포넌트 숫자를 지정해주는 메소드
+ - pickerView (_ ... , numberOfRowsInComponent ..) : 피커뷰의 각 컴포넌트에서 행의 개수를 지정해 주는 메소드
+ - 마지막으로 partPickerView.dataSource = self 해주면 끝 
     
 2. UIPickerViewDelegate 
 
