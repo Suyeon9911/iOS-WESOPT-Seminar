@@ -101,25 +101,35 @@ extension HomeVC: UITableViewDelegate{
 extension HomeVC: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == categoryCollectionView {
-            return CGSize(width: 10, height: 44)
+            //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
+//            return CGSize(width: cell.getEstimatedWidthFromDummyCell(), height: 32)
+//            return cell.fittingSize(category: categoryList[indexPath.row])
+            return CGSize(width: categoryList[indexPath.item].size(withAttributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)]).width + 20, height: 32)
+            
+        } else {
+            return CGSize(width: 72, height: 104)
         }
-        return CGSize(width: 72, height: 104)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if collectionView == categoryCollectionView {
-            return 0
+            return UIEdgeInsets.init(top: 0, left: 13, bottom: 0, right: 13)
         } else {
-            return 0
+            return UIEdgeInsets.zero
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return 0
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        if collectionView == categoryCollectionView {
+            return 9
+        } else {
+            return 0
+        }
     }
 }
 

@@ -10,32 +10,40 @@ import UIKit
 class CategoryCollectionViewCell: UICollectionViewCell {
     static let identifier = "CategoryCollectionViewCell"
     
-    var categoryButton = UIButton()
+   
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUI()
+        
+        setLabel()
     }
 }
 
 extension CategoryCollectionViewCell {
-    func setUI() {
-        categoryButton.setTitleColor(.white, for: .selected)
-        categoryButton.setTitleColor(.black, for: .normal)
+    func setLabel() {
+        categoryLabel.textAlignment = .center
+        categoryLabel.textColor = .black
+        categoryLabel.font = UIFont(name: "SFProDisplay-Regular", size: 14)
+    
+        categoryLabel.frame = CGRect(x: 0, y: 0, width: 46, height: 32)
+        categoryLabel.layer.backgroundColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1).cgColor
+        categoryLabel.layer.cornerRadius = 16
+        categoryLabel.layer.borderWidth = 1
+        categoryLabel.layer.borderColor = UIColor(red: 0.854, green: 0.854, blue: 0.854, alpha: 1).cgColor
+
+        contentView.addSubview(categoryLabel)
         
-        
-        if categoryButton.isSelected {
-            categoryButton.backgroundColor = .darkGray
-        } else {
-            categoryButton.backgroundColor = .lightGray
-        }
-        
-        categoryButton.layer.cornerRadius = 20
-        categoryButton.titleLabel?.font = UIFont(name: "SFProDisplay-Regular", size: 20)
-        
+        categoryLabel.translatesAutoresizingMaskIntoConstraints = false
+        categoryLabel.widthAnchor.constraint(equalToConstant: 46).isActive = true
+        categoryLabel.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 13).isActive = true
+        categoryLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
+    
     }
     
-    func setCategoryData(category: String?) {
-        categoryButton.titleLabel?.text = category
+    func setCategoryData(category: String) {
+        categoryLabel.text = category
     }
 }
