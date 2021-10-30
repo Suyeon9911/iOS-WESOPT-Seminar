@@ -45,6 +45,36 @@ struct UserSignService{
             }
         }
     }
+    
+    //get 방식
+    func readUserData(userId: Int,
+                      completion: @escaping (NetworkResult<Any>) -> (Void)){
+        let url = APIConstants.readUserURL + "\(userId)"
+        let header: HTTPHeaders = [
+            "Content-Type" : "application/json"
+        ]
+        
+        let dataRequest = AF.request(url,
+                                     method: .get,
+                                     encoding: JSONEncoding.default,
+                                     headers: header)
+        
+        dataRequest.responseData { dataResponse in
+            switch dataResponse.result{
+            case .success:
+                guard let statusCode = dataResponse.response?.statusCode else {return}
+                guard let value = dataResponse.value else {return}
+                let networkResult = self.judgeLoginStatus(by: statusCode, value)
+                completion(networkResult)
+            case .failure(let err):
+                print(err)
+                completion(.networkFail)
+        }
+        }
+        
+//        dataRequest.responseData(completionHandler: { response in
+//        })
+    }
 
     private func judgeLoginStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode{
@@ -62,3 +92,5 @@ struct UserSignService{
         return .success(decodeData)
     }
 }
+
+

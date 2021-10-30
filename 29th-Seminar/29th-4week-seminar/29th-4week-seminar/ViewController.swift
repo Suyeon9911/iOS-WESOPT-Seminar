@@ -12,12 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var userTestLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func touchUpToLogin(_ sender: Any) {
+        getUserData()
         requestLogin()
     }
     
@@ -55,5 +58,26 @@ extension ViewController {
         }
     }
     
+    func getUserData(){
+        UserSignService.shared.readUserData(userId: 2) { responseData in
+            switch responseData {
+            case .success(let loginResponse):
+                guard let response = loginResponse as? LoginResponseData else { return }
+                if let userData = response.data {
+                    self.simpleAlert(title: response.message,
+                                     message: "\(userData.name)님 환영합니다!")
+                }
+            case .requestErr(let msg):
+                print("requestERR \(msg)")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            
+        }
+    }
 }
 
+}

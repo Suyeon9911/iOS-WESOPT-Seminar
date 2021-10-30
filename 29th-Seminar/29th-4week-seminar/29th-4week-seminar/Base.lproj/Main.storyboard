@@ -44,6 +44,13 @@
                                     <action selector="touchUpToLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="khn-oc-bZ2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSY-dD-n8A">
+                                <rect key="frame" x="130" y="670" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQx-S7-xoY">
                                 <rect key="frame" x="101" y="280" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,6 +65,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="XWz-as-VfO" id="DkT-cg-bra"/>
                         <outlet property="passwordTextField" destination="csJ-in-Vpb" id="zjQ-cf-xDv"/>
+                        <outlet property="userTestLabel" destination="JSY-dD-n8A" id="zE4-WU-S0M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
