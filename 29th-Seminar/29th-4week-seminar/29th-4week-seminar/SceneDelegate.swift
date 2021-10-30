@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  29th-4week-seminar
 //
-//  Created by 김수연 on 2021/10/29.
+//  Created by 김수연 on 2021/10/30.
 //
 
 import UIKit
