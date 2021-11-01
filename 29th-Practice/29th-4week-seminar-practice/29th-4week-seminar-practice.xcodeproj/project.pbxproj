@@ -13,6 +13,9 @@
 		4D381127272E896A00E6E81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D381125272E896A00E6E81D /* Main.storyboard */; };
 		4D381129272E896B00E6E81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D381128272E896B00E6E81D /* Assets.xcassets */; };
 		4D38112C272E896B00E6E81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D38112A272E896B00E6E81D /* LaunchScreen.storyboard */; };
+		4D7EF1EF27304B7E00E26AD9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF1EE27304B7E00E26AD9 /* APIConstants.swift */; };
+		4D7EF1F127304CC800E26AD9 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF1F027304CC800E26AD9 /* NetworkResult.swift */; };
+		4D7EF1F327304DDF00E26AD9 /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF1F227304DDF00E26AD9 /* LoginResponseDataModel.swift */; };
 		535B8AB98A551F098E4FD7C1 /* Pods_29th_4week_seminar_practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53A66ECB72FD93FE64F3E0 /* Pods_29th_4week_seminar_practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		4D381128272E896B00E6E81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D38112B272E896B00E6E81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D38112D272E896B00E6E81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D7EF1EE27304B7E00E26AD9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		4D7EF1F027304CC800E26AD9 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		4D7EF1F227304DDF00E26AD9 /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
 		6A059D44754AF9F61C28D3BF /* Pods-29th-4week-seminar-practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-4week-seminar-practice.release.xcconfig"; path = "Target Support Files/Pods-29th-4week-seminar-practice/Pods-29th-4week-seminar-practice.release.xcconfig"; sourceTree = "<group>"; };
 		AC35A87DB9950105BC937281 /* Pods-29th-4week-seminar-practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-4week-seminar-practice.debug.xcconfig"; path = "Target Support Files/Pods-29th-4week-seminar-practice/Pods-29th-4week-seminar-practice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +84,9 @@
 				4D381128272E896B00E6E81D /* Assets.xcassets */,
 				4D38112A272E896B00E6E81D /* LaunchScreen.storyboard */,
 				4D38112D272E896B00E6E81D /* Info.plist */,
+				4D7EF1EE27304B7E00E26AD9 /* APIConstants.swift */,
+				4D7EF1F027304CC800E26AD9 /* NetworkResult.swift */,
+				4D7EF1F227304DDF00E26AD9 /* LoginResponseDataModel.swift */,
 			);
 			path = "29th-4week-seminar-practice";
 			sourceTree = "<group>";
@@ -88,7 +97,6 @@
 				AC35A87DB9950105BC937281 /* Pods-29th-4week-seminar-practice.debug.xcconfig */,
 				6A059D44754AF9F61C28D3BF /* Pods-29th-4week-seminar-practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,6 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7EF1EF27304B7E00E26AD9 /* APIConstants.swift in Sources */,
+				4D7EF1F127304CC800E26AD9 /* NetworkResult.swift in Sources */,
+				4D7EF1F327304DDF00E26AD9 /* LoginResponseDataModel.swift in Sources */,
 				4D381124272E896A00E6E81D /* ViewController.swift in Sources */,
 				4D381120272E896A00E6E81D /* AppDelegate.swift in Sources */,
 				4D381122272E896A00E6E81D /* SceneDelegate.swift in Sources */,
