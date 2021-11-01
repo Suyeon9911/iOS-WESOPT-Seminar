@@ -17,6 +17,7 @@
 		4D7EF1F127304CC800E26AD9 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF1F027304CC800E26AD9 /* NetworkResult.swift */; };
 		4D7EF1F327304DDF00E26AD9 /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF1F227304DDF00E26AD9 /* LoginResponseDataModel.swift */; };
 		4D7EF1F5273050DD00E26AD9 /* UserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF1F4273050DD00E26AD9 /* UserSignService.swift */; };
+		4D7EF1F727305D2700E26AD9 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF1F627305D2700E26AD9 /* PracticeViewController.swift */; };
 		535B8AB98A551F098E4FD7C1 /* Pods_29th_4week_seminar_practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53A66ECB72FD93FE64F3E0 /* Pods_29th_4week_seminar_practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		4D7EF1F027304CC800E26AD9 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4D7EF1F227304DDF00E26AD9 /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
 		4D7EF1F4273050DD00E26AD9 /* UserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignService.swift; sourceTree = "<group>"; };
+		4D7EF1F627305D2700E26AD9 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		6A059D44754AF9F61C28D3BF /* Pods-29th-4week-seminar-practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-4week-seminar-practice.release.xcconfig"; path = "Target Support Files/Pods-29th-4week-seminar-practice/Pods-29th-4week-seminar-practice.release.xcconfig"; sourceTree = "<group>"; };
 		AC35A87DB9950105BC937281 /* Pods-29th-4week-seminar-practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-4week-seminar-practice.debug.xcconfig"; path = "Target Support Files/Pods-29th-4week-seminar-practice/Pods-29th-4week-seminar-practice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				4D7EF1F027304CC800E26AD9 /* NetworkResult.swift */,
 				4D7EF1F227304DDF00E26AD9 /* LoginResponseDataModel.swift */,
 				4D7EF1F4273050DD00E26AD9 /* UserSignService.swift */,
+				4D7EF1F627305D2700E26AD9 /* PracticeViewController.swift */,
 			);
 			path = "29th-4week-seminar-practice";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				4D7EF1EF27304B7E00E26AD9 /* APIConstants.swift in Sources */,
 				4D7EF1F5273050DD00E26AD9 /* UserSignService.swift in Sources */,
 				4D7EF1F127304CC800E26AD9 /* NetworkResult.swift in Sources */,
+				4D7EF1F727305D2700E26AD9 /* PracticeViewController.swift in Sources */,
 				4D7EF1F327304DDF00E26AD9 /* LoginResponseDataModel.swift in Sources */,
 				4D381124272E896A00E6E81D /* ViewController.swift in Sources */,
 				4D381120272E896A00E6E81D /* AppDelegate.swift in Sources */,
