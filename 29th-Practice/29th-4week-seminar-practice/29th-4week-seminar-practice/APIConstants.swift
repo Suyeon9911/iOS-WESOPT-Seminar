@@ -14,5 +14,6 @@ struct APIConstants {
     //MARK: Feature URL
     // api마다 필요한 경로에 따라 변수를 추가하는 부분
     static let loginURL = baseURL + "/user/login"
+    static let readUserURL = baseURL + "/user"
     
 }
