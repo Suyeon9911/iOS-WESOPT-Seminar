@@ -8,6 +8,11 @@
 import UIKit
 
 class CustomNavigationBar: UIView {
+    
+    public var parentViewController: UIViewController?
+    
+    public var delegate: CustomViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         customInit()
@@ -24,4 +29,19 @@ class CustomNavigationBar: UIView {
             addSubview(view)
         }
     }
+    
+    @IBAction func profileButtonDidTab(_ sender: Any) {
+        self.delegate?.touchUpToGoLogin()
+//        guard let naviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController") as? NavigationController else { return }
+//
+//        naviVC.modalPresentationStyle = .fullScreen
+//        naviVC.modalTransitionStyle = .crossDissolve
+//
+//        parentViewController?.present(naviVC, animated: true, completion: nil)
+    }
+    
+}
+
+protocol CustomViewDelegate {
+    func touchUpToGoLogin()
 }
