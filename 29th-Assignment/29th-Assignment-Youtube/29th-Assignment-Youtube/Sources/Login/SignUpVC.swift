@@ -24,6 +24,7 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
         setNextButton()
         setTextField()
+        hideKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
