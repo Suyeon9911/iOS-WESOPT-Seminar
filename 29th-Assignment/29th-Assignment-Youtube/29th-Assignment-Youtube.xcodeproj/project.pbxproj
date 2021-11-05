@@ -43,6 +43,7 @@
 		4DDBDD4C2726454900248B4A /* ChnnelDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBDD4B2726454900248B4A /* ChnnelDataModel.swift */; };
 		4DDBDD4F27265AAF00248B4A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBDD4D27265AAF00248B4A /* CategoryCollectionViewCell.swift */; };
 		4DDBDD5027265AAF00248B4A /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBDD4E27265AAF00248B4A /* CategoryCollectionViewCell.xib */; };
+		4DF35AE52735733300C64C1E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF35AE42735733300C64C1E /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		4DDBDD4B2726454900248B4A /* ChnnelDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChnnelDataModel.swift; sourceTree = "<group>"; };
 		4DDBDD4D27265AAF00248B4A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DDBDD4E27265AAF00248B4A /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		4DF35AE42735733300C64C1E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6E7C9E5B6A464B57D1D8A808 /* Pods_29th_Assignment_Youtube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_Assignment_Youtube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A2D5215C88512857FA1925 /* Pods-29th-Assignment-Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-Assignment-Youtube.release.xcconfig"; path = "Target Support Files/Pods-29th-Assignment-Youtube/Pods-29th-Assignment-Youtube.release.xcconfig"; sourceTree = "<group>"; };
 		CE23368A66EACCB31F17EAB3 /* Pods-29th-Assignment-Youtube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-Assignment-Youtube.debug.xcconfig"; path = "Target Support Files/Pods-29th-Assignment-Youtube/Pods-29th-Assignment-Youtube.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		4D8DC929271B67E6005E664B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DF35AE1273570B200C64C1E /* Const */,
 				4D7EF24427342FF700E26AD9 /* Extension */,
 				4D8DC92C271B687F005E664B /* Storyboards */,
 				4D146AEF270CB4910009341B /* SceneDelegate.swift */,
@@ -273,6 +276,14 @@
 				4DDBDD4B2726454900248B4A /* ChnnelDataModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4DF35AE1273570B200C64C1E /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				4DF35AE42735733300C64C1E /* Constant.swift */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 		EF51090C797D68A6DA0DBC69 /* Frameworks */ = {
@@ -422,6 +433,7 @@
 				4D146AEE270CB4910009341B /* AppDelegate.swift in Sources */,
 				4D7EF23F2732BBD800E26AD9 /* NetworkResult.swift in Sources */,
 				4D7EF2432732BCA500E26AD9 /* UserSignService.swift in Sources */,
+				4DF35AE52735733300C64C1E /* Constant.swift in Sources */,
 				4DDBDD4C2726454900248B4A /* ChnnelDataModel.swift in Sources */,
 				4DDBDD462725DE9200248B4A /* VideoDataModel.swift in Sources */,
 				4D8DC91D271B56E8005E664B /* TabBarController.swift in Sources */,
