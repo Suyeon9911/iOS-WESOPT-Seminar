@@ -3,7 +3,6 @@
 - 말 그대로 사용자의 손가락에 따라 스크롤 기능을 구현하는 뷰
 - 스크롤 기능을 통해 상하좌우로 움직이며 추가 컨텐츠를 보여주는 뷰
 - UIScrollView는 오늘 배울 UITableView, UICollectionView의 SuperClass ! 
-
 <br/>
 
 ### ✨ scrollview의 2개의 layout guide (instance property)
@@ -24,4 +23,3 @@
 
 ### 🔮 마지막 요소에는 Bottom constraint 추가 !!
 - 스크롤뷰는 스스로 스크롤이 될 크기를 아지 못하기 때문에 추정할 수 있게 마지막 요소는 bottom에서 얼마나 떨어져 있는지 명시 
-
