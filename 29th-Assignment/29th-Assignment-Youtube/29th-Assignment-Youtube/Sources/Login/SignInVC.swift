@@ -85,39 +85,14 @@ extension SignInVC: UITextFieldDelegate {
 }
 
 extension SignInVC {
-    // Networking Alert
-    func successAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
-            guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-            
-            welcomeVC.userName = self.nameTextField.text
-            welcomeVC.modalPresentationStyle = .fullScreen
-            self.present(welcomeVC, animated: true, completion: nil)
-        }
-        
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
-    func failAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default)
-        
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
+    // 📌 PR : 이부분 이렇게 하눈게 맞눈곤지,,, 
     func requestLogin(){
         UserSignService.shared.login(email: emailTextField.text ?? "" , password: passwordTextField.text ?? "") { reponseData in
             switch reponseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else { return }
                 if response.data != nil {
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: "userName")
                     self.successAlert(title: "로그인", message: response.message)
                 }
             case .requestErr(let msg):
