@@ -130,7 +130,7 @@ struct UserSignService{
     
     private func isSignUpPathErr(data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(LoginResponseData.self, from: data)
+        guard let decodedData = try? decoder.decode(SignUpResponseData.self, from: data)
         else { return .pathErr(data)}
         return .pathErr(decodedData)
     }
