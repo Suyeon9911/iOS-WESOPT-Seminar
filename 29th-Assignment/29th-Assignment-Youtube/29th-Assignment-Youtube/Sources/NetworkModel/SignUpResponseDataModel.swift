@@ -21,4 +21,3 @@ struct SignUpResultData: Codable {
     let name, email: String
     // let password: String
 }
-
