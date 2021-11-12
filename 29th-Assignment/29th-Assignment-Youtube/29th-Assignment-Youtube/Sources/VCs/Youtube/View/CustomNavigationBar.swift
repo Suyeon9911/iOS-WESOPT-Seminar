@@ -29,15 +29,15 @@ class CustomNavigationBar: UIView {
             addSubview(view)
         }
     }
-    
-    // profile 버튼을 터치하면 로그인 화면으로 전환
-    private func presentToLoginViewController() {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "TouchProfileButton"), object: nil)
-    }
+//    // profile 버튼을 터치하면 로그인 화면으로 전환 : notification 방법
+//    private func presentToLoginViewController() {
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "TouchProfileButton"), object: nil)
+//    }
     
     @IBAction func profileButtonDidTab(_ sender: Any) {
-        presentToLoginViewController()
-        // self.delegate?.touchUpToGoLogin()
+        self.delegate?.touchUpToGoLogin()
+        // presentToLoginViewController()
+        
 //        guard let naviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController") as? NavigationController else { return }
 //
 //        naviVC.modalPresentationStyle = .fullScreen
@@ -45,10 +45,5 @@ class CustomNavigationBar: UIView {
 //
 //        parentViewController?.present(naviVC, animated: true, completion: nil)
     }
-
     
-}
-
-protocol CustomViewDelegate {
-    func touchUpToGoLogin()
 }

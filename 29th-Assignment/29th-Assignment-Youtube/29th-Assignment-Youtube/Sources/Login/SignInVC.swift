@@ -22,7 +22,6 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         setNextButton()
         setTextField()
-        hideKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,24 +84,33 @@ extension SignInVC: UITextFieldDelegate {
 }
 
 extension SignInVC {
-    // 📌 PR : 이부분 이렇게 하눈게 맞눈곤지,,, 
+    // 📌 PR : 이부분 이렇게 하눈게 맞눈곤지,,,
     func requestLogin(){
-        UserSignService.shared.login(email: emailTextField.text ?? "" , password: passwordTextField.text ?? "") { reponseData in
+        UserSignInService.shared.login(email: emailTextField.text ?? "" , password: passwordTextField.text ?? "") { reponseData in
             switch reponseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else { return }
                 if response.data != nil {
-                    UserDefaults.standard.set(self.nameTextField.text, forKey: "userName")
-                    self.successAlert(title: "로그인", message: response.message)
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
+                    self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+                        
+                        welcomeVC.modalPresentationStyle = .fullScreen
+                        self.present(welcomeVC, animated: true, completion: nil)
+                    })
                 }
-            case .requestErr(let msg):
-                print("requestERR \(msg)")
-                guard let response = msg as? LoginResponseData else { return }
-                self.failAlert(title: "로그인", message: response.message)
+            case .requestErr(let loginResponse):
+                guard let response = loginResponse as? LoginResponseData else { return }
+                print("requestERR \(response.message)")
+                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
             case .pathErr(let msg):
                 print("pathErr")
                 guard let response = msg as? LoginResponseData else { return }
-                self.failAlert(title: "로그인", message: response.message)
+                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
             case .serverErr:
                 print("serverErr")
             case .networkFail:

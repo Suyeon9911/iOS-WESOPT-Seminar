@@ -22,26 +22,28 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initDataList()
-        setNotification()
+        //setNotification()
         
         setTableView()
         setCollectionView()
         
-        //customNavigationBar.delegate = self
+        customNavigationBar.delegate = self
         //customNavigationBar.parentViewController = self
     }
-    private func setNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(touchProfileButton), name: NSNotification.Name(rawValue: "TouchProfileButton"), object: nil)
-    }
     
-    @objc private func touchProfileButton() {
-        guard let naviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController") as? NavigationController else { return }
-        
-        naviVC.modalPresentationStyle = .fullScreen
-        naviVC.modalTransitionStyle = .crossDissolve
-        
-        present(naviVC, animated: true, completion: nil)
-    }
+    // notification 코드 
+//    private func setNotification() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(touchProfileButton), name: NSNotification.Name(rawValue: "TouchProfileButton"), object: nil)
+//    }
+//
+//    @objc private func touchProfileButton() {
+//        guard let naviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController") as? NavigationController else { return }
+//
+//        naviVC.modalPresentationStyle = .fullScreen
+//        naviVC.modalTransitionStyle = .crossDissolve
+//
+//        present(naviVC, animated: true, completion: nil)
+//    }
     
     func initDataList(){
         videoList.append(contentsOf: [
