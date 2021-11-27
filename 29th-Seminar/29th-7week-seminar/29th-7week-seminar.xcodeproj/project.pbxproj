@@ -18,6 +18,7 @@
 		4D71B16227520659004FB34F /* DelegatePracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71B16127520659004FB34F /* DelegatePracticeVC.swift */; };
 		4D71B1652752070F004FB34F /* keywordCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71B1632752070E004FB34F /* keywordCVC.swift */; };
 		4D71B1662752070F004FB34F /* keywordCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D71B1642752070F004FB34F /* keywordCVC.xib */; };
+		4D71B168275217C8004FB34F /* GestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D71B167275217C8004FB34F /* GestureVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4D71B16127520659004FB34F /* DelegatePracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePracticeVC.swift; sourceTree = "<group>"; };
 		4D71B1632752070E004FB34F /* keywordCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keywordCVC.swift; sourceTree = "<group>"; };
 		4D71B1642752070F004FB34F /* keywordCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = keywordCVC.xib; sourceTree = "<group>"; };
+		4D71B167275217C8004FB34F /* GestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				4D71B16127520659004FB34F /* DelegatePracticeVC.swift */,
 				4D71B1632752070E004FB34F /* keywordCVC.swift */,
 				4D71B1642752070F004FB34F /* keywordCVC.xib */,
+				4D71B167275217C8004FB34F /* GestureVC.swift */,
 			);
 			path = "29th-7week-seminar";
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				4D71B14E2751F7F4004FB34F /* ViewController.swift in Sources */,
 				4D71B14A2751F7F4004FB34F /* AppDelegate.swift in Sources */,
+				4D71B168275217C8004FB34F /* GestureVC.swift in Sources */,
 				4D71B16227520659004FB34F /* DelegatePracticeVC.swift in Sources */,
 				4D71B15E2751F8D4004FB34F /* SecondVC.swift in Sources */,
 				4D71B1652752070F004FB34F /* keywordCVC.swift in Sources */,
