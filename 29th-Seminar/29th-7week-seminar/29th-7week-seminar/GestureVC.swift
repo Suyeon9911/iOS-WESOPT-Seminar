@@ -14,7 +14,7 @@ class GestureVC: UIViewController {
         super.viewDidLoad()
         //제스처 인식기 초기화 및 생성
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapView(gestureRecognizer:)))
-
+        // 2번째 방법 둘다 사용가능
         let tapRecognizer2 = UITapGestureRecognizer()
         tapRecognizer2.addTarget(self, action: #selector(tapView(gestureRecognizer:)))
 
