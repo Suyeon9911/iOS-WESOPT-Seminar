@@ -40,10 +40,20 @@ extension FirstViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         let nextVC = SecondViewController()
         // 옵셔널 바인딩 후 text 넣어서 present
-        //nextVC.setDataInTextField(data: firstTextField.text ?? "")
-        nextVC.receivedText = firstTextField.text ?? ""
-        present(nextVC, animated: true) {
-            nextVC.setDataInTextField(data: "클로저 사용 : present 이후에 text가 변경됨")
+
+//        nextVC.receivedText = firstTextField.text ?? ""
+//        present(nextVC, animated: true) {
+//            nextVC.setDataInTextField(data: "클로저 사용 : present 이후에 text가 변경됨")
+        NotificationCenter.default.addObserver(self, selector: #selector(dataReceived), name: NSNotification.Name("sample"), object: nil)
+
+        present(nextVC, animated: true, completion: nil)
+    }
+    
+    @objc
+    private func dataReceived(notification: NSNotification){
+        if let text = notification.object as? String {
+            // notification에서 전달한 object 값이 있다면, 타입캐스팅
+            firstTextField.text = text
         }
     }
 }

@@ -40,6 +40,7 @@ class SecondViewController: UIViewController {
 extension SecondViewController {
     @objc
     private func buttonDidTapped(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name("sample"), object: secondTextField.text ?? "")
         /// 2번째 vc에서 첫번째 vc로
         /// 나를 present하고 있는 첫번째 vc 는 presentingvc , 내가 띄운 vc는 presentedvc
         let presentingVC = presentingViewController as? FirstViewController
