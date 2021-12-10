@@ -10,11 +10,20 @@ import UIKit
 import Then
 import SnapKit
 
+protocol KeywordCellDelegate{
+    // keywordcell이 선택되었을 때, 선택되지 않았을때 일을 처리할 수 있는 대리자 모집공고
+    func keywordCellSelected(cell: KeywordCVC)
+    func keywordCellUnselected(cell: KeywordCVC, unselectedName: String)
+}
+
 class KeywordCVC: UICollectionViewCell {
     
     static let identifier = "keywordCVC"
     var keyword: String = ""
     var selectedKeyword: Bool = false
+
+    // 대리자 모집공고를 보고 대리자가 들어올 자리를 하나 만들어두기
+    var keywordDelegate: KeywordCellDelegate?
 
     private let nameButton = UIButton(type: .custom).then {
         $0.setTitleColor(.black, for: .normal)
@@ -36,7 +45,16 @@ class KeywordCVC: UICollectionViewCell {
 extension KeywordCVC {
     @objc
     private func nameButtonDidTapped(_ sender: UIButton) {
-        
+        // 어떤 일이 들어왔을때 대리자가 할수 있는 일을 시킨다 !
+        if selectedKeyword {
+            keywordDelegate?.keywordCellUnselected(cell: self , unselectedName: keyword)
+
+            nameButton.backgroundColor = .clear
+        } else {
+            keywordDelegate?.keywordCellSelected(cell: self)
+            nameButton.backgroundColor = .yellow
+        }
+        selectedKeyword.toggle()
     }
 
     func setKeyword(text: String){

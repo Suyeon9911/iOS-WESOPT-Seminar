@@ -68,9 +68,42 @@ extension DelegatePracticeVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeywordCVC.identifier, for: indexPath) as? KeywordCVC else { return UICollectionViewCell()}
 
         cell.setKeyword(text: nameList[indexPath.row])
+        cell.keywordDelegate = self
         return cell 
     }
 
+
+}
+
+extension DelegatePracticeVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
+    }
+}
+
+extension DelegatePracticeVC: KeywordCellDelegate {
+    // 키워드 셀 딜리게이트 채택하여 구현
+
+    func keywordCellSelected(cell: KeywordCVC) {
+        // 버튼이 눌렸을때 vc에 있는 selectedNameList에 추가.
+        // 키워드 vc에서 버튼이 눌렸을 때 해당 함수를 호출 -> 해당 함수가 불렸을때 vc에 있는 데이터 처리 가능..
+        // cell 자체에서는 컬렉션 뷰가 있는 vc에 기본적으로 관여하지 않고,, 실제 들어갈 알맹이를 구현해서 다른곳에 위임하여 사용.
+        // 뷰 계층간 데이터 전달에서 용이하게 사용 !
+        selectedNameList.append(cell.keyword)
+        updateCheckLabel()
+    }
+
+    func keywordCellUnselected(cell: KeywordCVC, unselectedName: String) {
+        //  버튼이 다시 눌려 언셀렉이 되었을 때 네임 리스트에서 눌린 이름 을 가지고 인덱스를 찾아 remove
+        let deletingIndex = selectedNameList.firstIndex(of: unselectedName) ?? -1
+        selectedNameList.remove(at: deletingIndex)
+        updateCheckLabel()
+    }
+
+    func updateCheckLabel(){
+        checkLabel.text = "\(selectedNameList.count)명이 선택되었습니다"
+        checkLabel.textColor = selectedNameList.count > 8 ? .red : .black
+    }
 
 }
 
