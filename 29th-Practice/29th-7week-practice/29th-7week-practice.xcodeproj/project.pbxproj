@@ -16,6 +16,9 @@
 		4DE580B327608E4100D40F99 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE580B227608E4100D40F99 /* FirstViewController.swift */; };
 		4DE580B527608E5300D40F99 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE580B427608E5300D40F99 /* SecondViewController.swift */; };
 		4DE580B82761374F00D40F99 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE580B72761374F00D40F99 /* UIView+.swift */; };
+		4DE580BA2761DD6000D40F99 /* DelegatePracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE580B92761DD6000D40F99 /* DelegatePracticeVC.swift */; };
+		4DE580BC27627DCC00D40F99 /* KeywordCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE580BB27627DCC00D40F99 /* KeywordCVC.swift */; };
+		4DE580BE2762855200D40F99 /* NameListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE580BD2762855200D40F99 /* NameListModel.swift */; };
 		B03E8E5CA0E356B1D75B4B1A /* Pods_29th_7week_practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C970F9EAE196944B0FD1C2 /* Pods_29th_7week_practice.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		4DE580B227608E4100D40F99 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4DE580B427608E5300D40F99 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4DE580B72761374F00D40F99 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		4DE580B92761DD6000D40F99 /* DelegatePracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePracticeVC.swift; sourceTree = "<group>"; };
+		4DE580BB27627DCC00D40F99 /* KeywordCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCVC.swift; sourceTree = "<group>"; };
+		4DE580BD2762855200D40F99 /* NameListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListModel.swift; sourceTree = "<group>"; };
 		694AA1C616C1D437C1171F64 /* Pods-29th-7week-practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-7week-practice.debug.xcconfig"; path = "Target Support Files/Pods-29th-7week-practice/Pods-29th-7week-practice.debug.xcconfig"; sourceTree = "<group>"; };
 		AD4FEE0A0FD71630DAE353EF /* Pods-29th-7week-practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-7week-practice.release.xcconfig"; path = "Target Support Files/Pods-29th-7week-practice/Pods-29th-7week-practice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +85,9 @@
 				4DE580AC27607FDB00D40F99 /* Info.plist */,
 				4DE580B227608E4100D40F99 /* FirstViewController.swift */,
 				4DE580B427608E5300D40F99 /* SecondViewController.swift */,
+				4DE580B92761DD6000D40F99 /* DelegatePracticeVC.swift */,
+				4DE580BB27627DCC00D40F99 /* KeywordCVC.swift */,
+				4DE580BD2762855200D40F99 /* NameListModel.swift */,
 			);
 			path = "29th-7week-practice";
 			sourceTree = "<group>";
@@ -227,8 +236,11 @@
 				4DE580A327607FD800D40F99 /* ViewController.swift in Sources */,
 				4DE5809F27607FD800D40F99 /* AppDelegate.swift in Sources */,
 				4DE580A127607FD800D40F99 /* SceneDelegate.swift in Sources */,
+				4DE580BC27627DCC00D40F99 /* KeywordCVC.swift in Sources */,
 				4DE580B527608E5300D40F99 /* SecondViewController.swift in Sources */,
+				4DE580BA2761DD6000D40F99 /* DelegatePracticeVC.swift in Sources */,
 				4DE580B327608E4100D40F99 /* FirstViewController.swift in Sources */,
+				4DE580BE2762855200D40F99 /* NameListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

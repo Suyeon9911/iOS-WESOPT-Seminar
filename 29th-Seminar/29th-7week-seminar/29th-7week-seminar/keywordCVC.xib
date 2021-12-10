@@ -36,7 +36,7 @@
             <connections>
                 <outlet property="keywordButton" destination="AB5-Ph-J2z" id="1Tt-Gh-rcn"/>
             </connections>
-            <point key="canvasLocation" x="132" y="66"/>
+            <point key="canvasLocation" x="131.8840579710145" y="65.625"/>
         </collectionViewCell>
     </objects>
 </document>
