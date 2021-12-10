@@ -11,6 +11,7 @@ import Then
 import SnapKit
 
 class FirstViewController: UIViewController {
+    static let identifier = "FirstViewController"
 
     private let titleLabel = UILabel().then {
         $0.text = "첫번째 VC입니다"

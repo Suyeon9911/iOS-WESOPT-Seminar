@@ -68,6 +68,14 @@ extension DelegatePracticeVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeywordCVC.identifier, for: indexPath) as? KeywordCVC else { return UICollectionViewCell()}
 
         cell.setKeyword(text: nameList[indexPath.row])
+
+        // cell들의 데이터를 지정하는 부분에서 클로저 구현코드 추가
+        if nameList[indexPath.row] == "김수연"{
+            cell.presentingClosure = {
+                let nextVC = FirstViewController()
+                self.present(nextVC, animated: true, completion: nil)
+            }
+        }
         cell.keywordDelegate = self
         return cell 
     }

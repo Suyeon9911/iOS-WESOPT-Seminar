@@ -24,6 +24,8 @@ class KeywordCVC: UICollectionViewCell {
 
     // 대리자 모집공고를 보고 대리자가 들어올 자리를 하나 만들어두기
     var keywordDelegate: KeywordCellDelegate?
+    // optional 타입으로 클로저를 프로퍼티로 선언 !
+    var presentingClosure: (() -> ())?
 
     private let nameButton = UIButton(type: .custom).then {
         $0.setTitleColor(.black, for: .normal)
@@ -53,6 +55,8 @@ extension KeywordCVC {
         } else {
             keywordDelegate?.keywordCellSelected(cell: self)
             nameButton.backgroundColor = .yellow
+            // 버튼이 눌렸을 때 클로저가 실행 , 옵셔널 클로저 호출
+            presentingClosure?()
         }
         selectedKeyword.toggle()
     }
