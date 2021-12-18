@@ -13,9 +13,12 @@
 		4D56C582276D2E1D0040DA86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D56C580276D2E1D0040DA86 /* Main.storyboard */; };
 		4D56C584276D2E220040DA86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D56C583276D2E220040DA86 /* Assets.xcassets */; };
 		4D56C587276D2E220040DA86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D56C585276D2E220040DA86 /* LaunchScreen.storyboard */; };
+		4D56EEE6276DB0A100D5C6DC /* seminar8-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D56EEE5276DB0A100D5C6DC /* seminar8-sample.json */; };
+		AE8BA677297CE47F33FAF3B5 /* Pods_29th_8week_seminar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B6CCB63FBDCADFD65C7002 /* Pods_29th_8week_seminar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4124AF4D013F92F9E50BC15E /* Pods-29th-8week-seminar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-8week-seminar.release.xcconfig"; path = "Target Support Files/Pods-29th-8week-seminar/Pods-29th-8week-seminar.release.xcconfig"; sourceTree = "<group>"; };
 		4D56C577276D2E1D0040DA86 /* 29th-8week-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-8week-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D56C57A276D2E1D0040DA86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D56C57C276D2E1D0040DA86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		4D56C583276D2E220040DA86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D56C586276D2E220040DA86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D56C588276D2E220040DA86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D56EEE5276DB0A100D5C6DC /* seminar8-sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "seminar8-sample.json"; sourceTree = "<group>"; };
+		59A6EAF11216C26E81F70296 /* Pods-29th-8week-seminar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-8week-seminar.debug.xcconfig"; path = "Target Support Files/Pods-29th-8week-seminar/Pods-29th-8week-seminar.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B6CCB63FBDCADFD65C7002 /* Pods_29th_8week_seminar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_8week_seminar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8BA677297CE47F33FAF3B5 /* Pods_29th_8week_seminar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40A78A970AAAD8DC195CD2E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59A6EAF11216C26E81F70296 /* Pods-29th-8week-seminar.debug.xcconfig */,
+				4124AF4D013F92F9E50BC15E /* Pods-29th-8week-seminar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		465E788448B8D2455D55547F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7B6CCB63FBDCADFD65C7002 /* Pods_29th_8week_seminar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4D56C56E276D2E1D0040DA86 = {
 			isa = PBXGroup;
 			children = (
 				4D56C579276D2E1D0040DA86 /* 29th-8week-seminar */,
 				4D56C578276D2E1D0040DA86 /* Products */,
+				40A78A970AAAD8DC195CD2E3 /* Pods */,
+				465E788448B8D2455D55547F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +89,7 @@
 				4D56C583276D2E220040DA86 /* Assets.xcassets */,
 				4D56C585276D2E220040DA86 /* LaunchScreen.storyboard */,
 				4D56C588276D2E220040DA86 /* Info.plist */,
+				4D56EEE5276DB0A100D5C6DC /* seminar8-sample.json */,
 			);
 			path = "29th-8week-seminar";
 			sourceTree = "<group>";
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D56C58B276D2E220040DA86 /* Build configuration list for PBXNativeTarget "29th-8week-seminar" */;
 			buildPhases = (
+				DE1BB12D84C940489C59945F /* [CP] Check Pods Manifest.lock */,
 				4D56C573276D2E1D0040DA86 /* Sources */,
 				4D56C574276D2E1D0040DA86 /* Frameworks */,
 				4D56C575276D2E1D0040DA86 /* Resources */,
+				F154E985322D3FDC67330B1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +156,54 @@
 			files = (
 				4D56C587276D2E220040DA86 /* LaunchScreen.storyboard in Resources */,
 				4D56C584276D2E220040DA86 /* Assets.xcassets in Resources */,
+				4D56EEE6276DB0A100D5C6DC /* seminar8-sample.json in Resources */,
 				4D56C582276D2E1D0040DA86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DE1BB12D84C940489C59945F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-29th-8week-seminar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F154E985322D3FDC67330B1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-29th-8week-seminar/Pods-29th-8week-seminar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-29th-8week-seminar/Pods-29th-8week-seminar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-29th-8week-seminar/Pods-29th-8week-seminar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D56C573276D2E1D0040DA86 /* Sources */ = {
@@ -284,6 +356,7 @@
 		};
 		4D56C58C276D2E220040DA86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A6EAF11216C26E81F70296 /* Pods-29th-8week-seminar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +385,7 @@
 		};
 		4D56C58D276D2E220040DA86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4124AF4D013F92F9E50BC15E /* Pods-29th-8week-seminar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
