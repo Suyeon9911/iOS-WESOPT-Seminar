@@ -102,7 +102,18 @@ extension HomeVC: UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoTableViewCell.identifier) as? VideoTableViewCell else {return UITableViewCell()}
         
         cell.setData(videoData: videoList[indexPath.row])
-        cell.videoDelegate = self
+        cell.presentDetailViewController = {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: DetailVideoVC.identifier) as? DetailVideoVC else { return }
+            nextVC.modalPresentationStyle = .overFullScreen
+            nextVC.titleText = self.videoList[indexPath.row].videoTitle
+            nextVC.thumnailImage = self.videoList[indexPath.row].thumbnailImageName
+            nextVC.channelText = self.videoList[indexPath.row].channelName
+            nextVC.views = self.videoList[indexPath.row].views
+            nextVC.uploadDate = self.videoList[indexPath.row].uploadDate
+
+            self.present(nextVC, animated: true, completion: nil)
+        }
+        //cell.videoDelegate = self
         return cell
     }
 }

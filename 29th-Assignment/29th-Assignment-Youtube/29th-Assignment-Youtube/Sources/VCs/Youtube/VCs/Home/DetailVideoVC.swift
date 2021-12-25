@@ -12,6 +12,13 @@ import SkeletonView
 final class DetailVideoVC: UIViewController {
     static let identifier = "DetailVideoVC"
 
+    var thumnailImage: String?
+    var titleText: String?
+    var subtitleText: String?
+    var channelText: String?
+    var views: Int?
+    var uploadDate: String?
+
     @IBOutlet weak var detailVideoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -21,7 +28,7 @@ final class DetailVideoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        setSkeleton()
+        //setSkeleton()
     }
     
     @IBAction func backButtonDidTapped(_ sender: UIButton) {
@@ -32,10 +39,18 @@ final class DetailVideoVC: UIViewController {
 
 extension DetailVideoVC {
     func setUI() {
+        if let thumnailImage = thumnailImage, let image = UIImage(named: thumnailImage) {
+            detailVideoImageView.image = image
+        }
+
         detailVideoImageView.contentMode = .scaleToFill
+
+        titleLabel.text = titleText
         titleLabel.font = UIFont(name: "SFProDisplay-Regular", size: 15)
         titleLabel.numberOfLines = 0
 
+        descriptionLabel.text = "\(channelText ?? "") · 조회수 \(views ?? 0)만회 ·  \(uploadDate ?? "") 전"
+        
         descriptionLabel.textColor = UIColor(red: 0.376, green: 0.376, blue: 0.376, alpha: 1)
         descriptionLabel.font = UIFont(name: "SFProDisplay-Regular", size: 13)
     }

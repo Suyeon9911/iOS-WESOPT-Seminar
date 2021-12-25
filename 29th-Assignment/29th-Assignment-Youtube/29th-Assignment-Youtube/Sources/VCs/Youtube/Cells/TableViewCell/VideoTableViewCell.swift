@@ -16,12 +16,14 @@ class VideoTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var moreMenuButton: UIButton!
 
-    var videoDelegate: VideoCellDelegate?
+    //var videoDelegate: VideoCellDelegate?
+
+    var presentDetailViewController: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
-        setGesture()
+        setTapGesture()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -47,7 +49,7 @@ extension VideoTableViewCell {
         descriptionLabel.font = UIFont(name: "SFProDisplay-Regular", size: 13)
     }
 
-    func setGesture() {
+    func setTapGesture() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapVideoImageView(gestureRecognizer:)))
 
         thumbnailImageView.addGestureRecognizer(tapRecognizer)
@@ -55,6 +57,7 @@ extension VideoTableViewCell {
 
     @objc
     func tapVideoImageView(gestureRecognizer: UIGestureRecognizer){
-        self.videoDelegate?.videoCellDidTapped(image: thumbnailImageView.image ?? UIImage(), title: titleLabel.text ?? "" , description: descriptionLabel.text ?? "")
+//        self.videoDelegate?.videoCellDidTapped(image: thumbnailImageView.image ?? UIImage(), title: titleLabel.text ?? "" , description: descriptionLabel.text ?? "")
+        presentDetailViewController?()
     }
 }
